@@ -1792,6 +1792,26 @@ var intervalTimer = setInterval(function(){cardCounter()},100);
 //   var gWarnOnLinks = localStorage.warnOnLinks ? loalStorage.warnOnLinks == "true" : true;
 
 
+   if (gHideBtns) {
+    $("#client-settings-btn").hide();
+    $("#new-room-btn").hide();
+    $("#room-settings-btn").hide();
+    $("#midi-btn").hide();
+    $("#sound-btn").hide();
+  //  $("#client-settings-btn").hide();
+    
+    
+  } else {
+    $("#client-settings-btn").show();
+        $("#client-settings-btn").show()
+    $("#new-room-btn").show()
+    $("#room-settings-btn").show()
+    $("#midi-btn").show()
+    $("#sound-btn").show()
+  }
+
+
+
 
   // Hide piano attribute
   if (gHidePiano) {
@@ -4235,6 +4255,17 @@ var intervalTimer = setInterval(function(){cardCounter()},100);
             createSetting("output-own-notes-to-midi", "Output own notes to MIDI", gOutputOwnNotes, false, html, () => {
               gOutputOwnNotes = !gOutputOwnNotes;
               localStorage.outputOwnNotes = gOutputOwnNotes;
+            });
+
+            content.appendChild(html);
+            break;
+
+                    case "more":
+            var html = document.createElement("div");
+
+            createSetting("more-settings", "Hide Buttons", gHideBtns, false, html, () => {
+                gHideBtns = !gHideBtns;
+                  localStorage.HideAllBtns = gHideBtns;
             });
 
             content.appendChild(html);
