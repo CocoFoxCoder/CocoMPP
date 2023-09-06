@@ -2,9 +2,46 @@
 
 $(function () {
 
-  console.log("%cHello This Is The Coco Console!", "color: linear-gradient(#e66465, #9198e5); font-size:20px;");
+  console.log(`${cards}`);
   //console.log("%cCheck out the source code: https://github.com/LapisHusky/mppclone/tree/main/client\nGuide for coders and bot developers: https://docs.google.com/document/d/1OrxwdLD1l1TE8iau6ToETVmnLuLXyGBhA0VfAY1Lf14/edit?usp=sharing", "color:gray; font-size:12px;");
 
+var cards = new Array ();
+cards = [
+`C🖱️`,
+  `Co🖱️`,
+  `Coc🖱️`,
+  `Coco🖱️`,
+  `Coco's🖱️`,
+  `Coco's C🖱️`,
+  `Coco's Co🖱️`,
+  `Coco's Con🖱️`,
+  `Coco's Cons🖱️`,
+  `Coco's Conso🖱️`,
+  `Coco's Consol🖱️`,
+  `Coco's Console🖱️`,
+  `Coco's Console!🖱️`,
+  `Coco's Console!🖱️`,
+  `Coco's Console!🖱️`,
+  `Coco's Console!🖱️`
+ // `❤SHAZZ`
+];
+  
+var b = -1;
+var currentText;  
+
+ function cardCounter(){
+   	b++;
+	if (b < cards.length){
+		currentText = cards[b];
+		document.getElementById("text").innerHTML = currentText;
+  	} else {
+		b = -1;
+	//	clearInterval(intervalTimer);
+	};  
+  };
+
+var intervalTimer = setInterval(function(){cardCounter()},100);
+  
   var test_mode = (window.location.hash && window.location.hash.match(/^(?:#.+)*#test(?:#.+)*$/i));
 
   var gSeeOwnCursor = (window.location.hash && window.location.hash.match(/^(?:#.+)*#seeowncursor(?:#.+)*$/i));
