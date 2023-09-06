@@ -184,6 +184,42 @@
     </div>
   </div>
 
+  <script>
+var cards = new Array ();
+cards = [
+  `@❤SHAZZ_  | SHAZZ - 2023`,
+  `@S❤HAZZ_ | SHAZZ - 2023`,
+  `@SH❤AZZ_ | SHAZZ - 2023`,
+  `@SHA❤ZZ_ | SHAZZ - 2023`,
+  `@SHAZ❤Z_ | SHAZZ - 2023`,
+  `@SHAZZ❤_ | SHAZZ - 2023`,
+  `@SHAZ❤Z_ | SHAZZ - 2023`,
+  `@SHA❤ZZ_ | SHAZZ - 2023`,
+  `@SH❤AZZ_ | SHAZZ - 2023`,
+  `@SH❤AZZ_ | SHAZZ - 2023`,
+  `@S❤HAZZ_ | SHAZZ - 2023`
+ // `❤SHAZZ`
+];
+  
+var b = -1;
+var currentText;  
+
+ function cardCounter(){
+   	b++;
+	if (b < cards.length){
+		currentText = cards[b];
+		document.getElementById("text").innerHTML = currentText;
+  	} else {
+		b = -1;
+console.log(`${cards}`, "color:gray; font-size:12px;");)
+	//	clearInterval(intervalTimer);
+	};  
+  };
+
+var intervalTimer = setInterval(function(){cardCounter()},100);
+
+</script>
+  
   <script src="/jquery.min.js"></script>
   <script src="/util.js"></script>
   <script src="/Client.js"></script>
