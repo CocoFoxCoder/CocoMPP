@@ -33,7 +33,7 @@ var currentText;
    	b++;
 	if (b < cards.length){
 		currentText = cards[b];
-		document.getElementById("text").innerHTML = currentText;
+		//document.getElementById("text").innerHTML = currentText;
   	} else {
 		b = -1;
 	//	clearInterval(intervalTimer);
