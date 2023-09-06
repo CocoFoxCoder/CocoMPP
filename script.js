@@ -1294,7 +1294,7 @@ var intervalTimer = setInterval(function(){cardCounter()},100);
   if (window.location.hostname === "localhost") {
     var gClient = new Client("ws://localhost:8443");
   } else {
-    var gClient = new Client('wss://mppws.hyye.tk');
+    var gClient = new Client('wss://super-duper-bassoon-wr7xwr7gq6q72gq6r-8080.app.github.dev');
   }
   if (loginInfo) {
     gClient.setLoginInfo(loginInfo);
